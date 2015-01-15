@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/soniq/!svn/ver/448/android/MediaHelper/src/com/soniq/mediahelper
+END
+AirplayConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/soniq/mediahelper/AirplayConfig.java
+END
+CheckImageLoaderConfiguration.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/soniq/!svn/ver/455/android/MediaHelper/src/com/soniq/mediahelper/CheckImageLoaderConfiguration.java
+END
+Constants.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/soniq/!svn/ver/457/android/MediaHelper/src/com/soniq/mediahelper/Constants.java
+END
+UniversalImageLoadTool.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/soniq/!svn/ver/455/android/MediaHelper/src/com/soniq/mediahelper/UniversalImageLoadTool.java
+END
+HttpServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/soniq/!svn/ver/448/android/MediaHelper/src/com/soniq/mediahelper/HttpServer.java
+END
+MainActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/soniq/!svn/ver/455/android/MediaHelper/src/com/soniq/mediahelper/MainActivity.java
+END
+HttpHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/soniq/!svn/ver/455/android/MediaHelper/src/com/soniq/mediahelper/HttpHelper.java
+END
+NetworkUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/soniq/!svn/ver/455/android/MediaHelper/src/com/soniq/mediahelper/NetworkUtils.java
+END
+CrashHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/soniq/!svn/ver/448/android/MediaHelper/src/com/soniq/mediahelper/CrashHandler.java
+END
+WAPI.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/soniq/!svn/ver/455/android/MediaHelper/src/com/soniq/mediahelper/WAPI.java
+END
+AirplayServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/soniq/!svn/ver/455/android/MediaHelper/src/com/soniq/mediahelper/AirplayServer.java
+END
+MediaService.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/soniq/!svn/ver/455/android/MediaHelper/src/com/soniq/mediahelper/MediaService.java
+END
+ClientUpgrade.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/soniq/!svn/ver/455/android/MediaHelper/src/com/soniq/mediahelper/ClientUpgrade.java
+END

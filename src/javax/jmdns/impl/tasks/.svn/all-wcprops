@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/javax/jmdns/impl/tasks
+END
+RecordReaper.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/javax/jmdns/impl/tasks/RecordReaper.java
+END
+DNSTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/javax/jmdns/impl/tasks/DNSTask.java
+END
+package-info.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/javax/jmdns/impl/tasks/package-info.java
+END
+Responder.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/javax/jmdns/impl/tasks/Responder.java
+END

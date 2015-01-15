@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/soniq/!svn/ver/448/android/MediaHelper/src/com/geniusgithub/mediarender/util
+END
+BootBroadcastReceiver.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/soniq/!svn/ver/456/android/MediaHelper/src/com/geniusgithub/mediarender/util/BootBroadcastReceiver.java
+END
+CommonUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/soniq/!svn/ver/448/android/MediaHelper/src/com/geniusgithub/mediarender/util/CommonUtil.java
+END
+SharedUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/soniq/!svn/ver/456/android/MediaHelper/src/com/geniusgithub/mediarender/util/SharedUtils.java
+END
+FileHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/soniq/!svn/ver/448/android/MediaHelper/src/com/geniusgithub/mediarender/util/FileHelper.java
+END
+CommonLog.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/util/CommonLog.java
+END
+DlnaUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/soniq/!svn/ver/456/android/MediaHelper/src/com/geniusgithub/mediarender/util/DlnaUtils.java
+END
+LogFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/util/LogFactory.java
+END
+DrawableCenterTextView.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/util/DrawableCenterTextView.java
+END
+BitmapUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/soniq/!svn/ver/448/android/MediaHelper/src/com/geniusgithub/mediarender/util/BitmapUtils.java
+END

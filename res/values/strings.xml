@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">同屏助手</string>
+    <string name="second">S</string>
+    <string name="separate"> / </string>
+    <string name="init_time">00:00</string>
+    <string name="load_image_fail">"图片加载失败 "</string>
+    <string name="parse_image_fail">"图片解析失败"</string>
+    <string name="toast_musicplay_fail">音乐播放失败</string>
+    <string name="toast_videoplay_fail">视频播放失败 </string>
+    <string name="video_loading">Loading…</string>
+    <string name="video_speed_unit_second">S</string>
+    <string name="buffering">Loading…</string>
+    <string name="mp_unknown_artist">Unknow Artist</string>
+    <string name="mp_unknown_album">Unknow Album</string>
+    <string name="mp_cant_find_lyrics">the lrc can\'t be found</string>
+    <string name="mp_lyrics_tips">***&#160;&#160;&#160;the lrc come from internet，just be reference&#160;&#160;&#160;***</string>
+    <string name="title_btn_exit">退出</string>
+    <string name="title_btn_cancel">取消</string>
+    <string name="title_btn_upgrade">更新</string>
+
+</resources>

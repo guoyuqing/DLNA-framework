@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/soniq/!svn/ver/448/android/MediaHelper/src/com/geniusgithub/mediarender
+END
+BaseActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/BaseActivity.java
+END
+DeviceUpdateBrocastReceiver.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/DeviceUpdateBrocastReceiver.java
+END
+ItatisticsEvent.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/ItatisticsEvent.java
+END
+DeviceUpdateBrocastFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/DeviceUpdateBrocastFactory.java
+END
+RenderApplication.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/RenderApplication.java
+END
+DeviceInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/DeviceInfo.java
+END

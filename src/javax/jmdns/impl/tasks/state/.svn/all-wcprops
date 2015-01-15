@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/javax/jmdns/impl/tasks/state
+END
+DNSStateTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/javax/jmdns/impl/tasks/state/DNSStateTask.java
+END
+Renewer.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/javax/jmdns/impl/tasks/state/Renewer.java
+END
+Announcer.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/javax/jmdns/impl/tasks/state/Announcer.java
+END
+Canceler.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/javax/jmdns/impl/tasks/state/Canceler.java
+END
+package-info.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/javax/jmdns/impl/tasks/state/package-info.java
+END
+Prober.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/javax/jmdns/impl/tasks/state/Prober.java
+END

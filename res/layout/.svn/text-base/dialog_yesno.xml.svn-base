@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_tips"
+    android:padding="20.0dip" >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dip"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="@dimen/tips_dialog_text_size" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dip" >
+
+        <Button
+            android:id="@+id/dialog_text_sure"
+            android:layout_width="@dimen/general_button_width"
+            android:layout_height="@dimen/general_button_height"
+            android:layout_marginRight="50.0dip"
+            android:background="@drawable/bg_btn_green_selector"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:shadowColor="@color/button_title_shadow_color"
+            android:shadowDx="@integer/button_text_shadow_dx"
+            android:shadowDy="@integer/button_text_shadow_dy"
+            android:shadowRadius="@integer/button_text_shadow_radius"
+            android:text="@string/title_btn_exit"
+            android:textColor="@drawable/btn_color"
+            android:textSize="@dimen/button_title_text_size" />
+
+        <Button
+            android:id="@+id/dialog_text_cancel"
+            android:layout_width="@dimen/general_button_width"
+            android:layout_height="@dimen/general_button_height"
+            android:background="@drawable/bg_btn_gray_selector"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:shadowColor="@color/button_title_shadow_color"
+            android:shadowDx="@integer/button_text_shadow_dx"
+            android:shadowDy="@integer/button_text_shadow_dy"
+            android:shadowRadius="@integer/button_text_shadow_radius"
+            android:text="@string/title_btn_cancel"
+            android:textColor="@drawable/btn_color"
+            android:textSize="@dimen/button_title_text_size" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/music/lrc
+END
+LyricObject.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/music/lrc/LyricObject.java
+END
+LyricHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/music/lrc/LyricHelper.java
+END
+MusicUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/music/lrc/MusicUtils.java
+END
+ErrorThrowable.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/music/lrc/ErrorThrowable.java
+END
+HttpManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/music/lrc/HttpManager.java
+END
+LyricView.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/music/lrc/LyricView.java
+END
+LrcDownLoadHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/music/lrc/LrcDownLoadHelper.java
+END

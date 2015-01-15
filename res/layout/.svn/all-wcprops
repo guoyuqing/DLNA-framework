@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/soniq/!svn/ver/448/android/MediaHelper/res/layout
+END
+music_loading_layout.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/soniq/!svn/ver/446/android/MediaHelper/res/layout/music_loading_layout.xml
+END
+media_loading_layout.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/soniq/!svn/ver/446/android/MediaHelper/res/layout/media_loading_layout.xml
+END
+music_toolbar_layout.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/soniq/!svn/ver/446/android/MediaHelper/res/layout/music_toolbar_layout.xml
+END
+activity_main.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/soniq/!svn/ver/452/android/MediaHelper/res/layout/activity_main.xml
+END
+media_toolbar_layout.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/soniq/!svn/ver/446/android/MediaHelper/res/layout/media_toolbar_layout.xml
+END
+media_prepare_layout.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/soniq/!svn/ver/446/android/MediaHelper/res/layout/media_prepare_layout.xml
+END
+music_player_layout.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/soniq/!svn/ver/446/android/MediaHelper/res/layout/music_player_layout.xml
+END
+dialog_yesno.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/soniq/!svn/ver/452/android/MediaHelper/res/layout/dialog_yesno.xml
+END
+image_player_layout.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/soniq/!svn/ver/446/android/MediaHelper/res/layout/image_player_layout.xml
+END
+video_player_layout.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/soniq/!svn/ver/446/android/MediaHelper/res/layout/video_player_layout.xml
+END
+dialog_upgrade.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/soniq/!svn/ver/452/android/MediaHelper/res/layout/dialog_upgrade.xml
+END

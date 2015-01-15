@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/player
+END
+IBasePlayEngine.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/player/IBasePlayEngine.java
+END
+PlayState.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/player/PlayState.java
+END
+MusicPlayEngineImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/player/MusicPlayEngineImpl.java
+END
+CheckDelayTimer.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/player/CheckDelayTimer.java
+END
+SingleSecondTimer.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/player/SingleSecondTimer.java
+END
+AbstractMediaPlayEngine.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/player/AbstractMediaPlayEngine.java
+END
+PlayerEngineListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/player/PlayerEngineListener.java
+END
+AbstractTimer.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/player/AbstractTimer.java
+END
+VideoPlayEngineImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/player/VideoPlayEngineImpl.java
+END

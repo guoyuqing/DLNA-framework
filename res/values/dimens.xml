@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- tips dialog -->
+    <dimen name="tips_dialog_text_size">30sp</dimen>
+    <dimen name="tips_dialog_loading_width">50dip</dimen>
+    <dimen name="tips_dialog_loading_height">50dip</dimen>
+    <dimen name="button_title_text_size">22sp</dimen>
+    <dimen name="general_button_width">180dip</dimen>
+    <dimen name="general_button_height">58dip</dimen>
+
+    <integer name="button_text_shadow_radius">1</integer>
+    <integer name="button_text_shadow_dx">2</integer>
+    <integer name="button_text_shadow_dy">2</integer>
+
+</resources>

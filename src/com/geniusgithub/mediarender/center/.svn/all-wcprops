@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/center
+END
+DlnaMediaModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/center/DlnaMediaModel.java
+END
+DLNAGenaEventBrocastReceiver.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/center/DLNAGenaEventBrocastReceiver.java
+END
+DMRCenter.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/center/DMRCenter.java
+END
+IBaseEngine.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/center/IBaseEngine.java
+END
+DLNAGenaEventBrocastFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/center/DLNAGenaEventBrocastFactory.java
+END
+DlnaMediaModelFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/center/DlnaMediaModelFactory.java
+END
+IDMRAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/center/IDMRAction.java
+END
+MediaControlBrocastFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/center/MediaControlBrocastFactory.java
+END
+DMRWorkThread.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/center/DMRWorkThread.java
+END
+MediaControlBrocastReceiver.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/center/MediaControlBrocastReceiver.java
+END
+MediaRenderProxy.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/center/MediaRenderProxy.java
+END

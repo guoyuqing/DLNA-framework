@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/javax/jmdns/impl/constants
+END
+DNSRecordClass.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/javax/jmdns/impl/constants/DNSRecordClass.java
+END
+DNSLabel.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/javax/jmdns/impl/constants/DNSLabel.java
+END
+DNSOperationCode.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/javax/jmdns/impl/constants/DNSOperationCode.java
+END
+DNSOptionCode.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/javax/jmdns/impl/constants/DNSOptionCode.java
+END
+DNSState.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/javax/jmdns/impl/constants/DNSState.java
+END
+DNSConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/javax/jmdns/impl/constants/DNSConstants.java
+END
+package-info.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/javax/jmdns/impl/constants/package-info.java
+END
+DNSRecordType.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/javax/jmdns/impl/constants/DNSRecordType.java
+END
+DNSResultCode.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/soniq/!svn/ver/446/android/MediaHelper/src/javax/jmdns/impl/constants/DNSResultCode.java
+END
