@@ -1,12 +1,16 @@
 package com.soniq.mediahelper;
 
 import android.annotation.SuppressLint;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnFocusChangeListener;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,7 +44,12 @@ public class MainActivity extends BaseActivity implements
 	private RelativeLayout layout_name;
 	private RelativeLayout layout_server;
 
+	private ImageView img_server_state_left;
+	private ImageView img_server_state_right;
+
 	private String str_ip = "";
+
+	private int state = Constants.STATE_NONE;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -55,9 +64,12 @@ public class MainActivity extends BaseActivity implements
 		// 启动后，自动检测版本更新
 		ClientUpgrade cu = new ClientUpgrade(this);
 		cu.startCheckVersion(null);
+		registerBoradcastReceiver();
 	}
 
 	private void setupView() {
+		img_server_state_left = (ImageView) findViewById(R.id.img_server_state_left);
+		img_server_state_right = (ImageView) findViewById(R.id.img_server_state_right);
 		txt_version = (TextView) findViewById(R.id.txt_version);
 		layout_server = (RelativeLayout) findViewById(R.id.layout_server);
 		layout_name = (RelativeLayout) findViewById(R.id.layout_name);
@@ -74,17 +86,36 @@ public class MainActivity extends BaseActivity implements
 		DlnaUtils.getFocus(layout_name);
 		DlnaUtils.getFocus(layout_server);
 		if (serverState == 0) {
-			txt_server_state.setText("关闭");
+			txt_server_state.setText("已关闭");
+			state = Constants.STATE_CLOSEED;
 		} else {
-			txt_server_state.setText("开启");
+			txt_server_state.setText("已开启");
+			state = Constants.STATE_OPENED;
 			// mRenderProxy.startEngine();
 			// startAriPlay();
 		}
-		focus(txt_server_state, true);
+		// focus(txt_server_state, true);
+		focusServerState(true);
 		focus(txt_name, false);
 
 		layout_server.setOnFocusChangeListener(this);
 		layout_name.setOnFocusChangeListener(this);
+
+	}
+
+	private void focusServerState(boolean focus) {
+		if (focus) {
+			img_server_state_left
+					.setImageResource(R.drawable.arrow_left_select);
+			img_server_state_right
+					.setImageResource(R.drawable.arrow_right_select);
+		} else {
+			img_server_state_left
+					.setImageResource(R.drawable.arrow_left_nolmal);
+			img_server_state_right
+					.setImageResource(R.drawable.arrow_right_nolmal);
+		}
+		txt_server_state.setActivated(focus);
 
 	}
 
@@ -94,17 +125,24 @@ public class MainActivity extends BaseActivity implements
 
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		System.out.println("state:::::::::::::::::" + state);
 		if (keyCode == KeyEvent.KEYCODE_DPAD_LEFT) {
-			if (layout_server.isFocused()) {
-				txtServerFocus();
-			} else if (layout_name.isFocused()) {
-				txtNameFocus(keyCode);
+			if (state == Constants.STATE_OPENED
+					|| state == Constants.STATE_CLOSEED) {
+				if (layout_server.isFocused()) {
+					txtServerFocus();
+				} else if (layout_name.isFocused()) {
+					txtNameFocus(keyCode);
+				}
 			}
 		} else if (keyCode == KeyEvent.KEYCODE_DPAD_RIGHT) {
-			if (layout_server.isFocused()) {
-				txtServerFocus();
-			} else if (layout_name.isFocused()) {
-				txtNameFocus(keyCode);
+			if (state == Constants.STATE_OPENED
+					|| state == Constants.STATE_CLOSEED) {
+				if (layout_server.isFocused()) {
+					txtServerFocus();
+				} else if (layout_name.isFocused()) {
+					txtNameFocus(keyCode);
+				}
 			}
 		}
 		return super.onKeyDown(keyCode, event);
@@ -112,11 +150,11 @@ public class MainActivity extends BaseActivity implements
 
 	private void txtServerFocus() {
 		if (serverState == 0) {
-			txt_server_state.setText("开启");
+			txt_server_state.setText("已开启");
 			serverState = 1;
 
 		} else {
-			txt_server_state.setText("关闭");
+			txt_server_state.setText("已关闭");
 			serverState = 0;
 		}
 		SharedUtils.setServerState(serverState);
@@ -148,7 +186,8 @@ public class MainActivity extends BaseActivity implements
 			focus(txt_name, focus);
 			break;
 		case R.id.layout_server:
-			focus(txt_server_state, focus);
+			// focus(txt_server_state, focus);
+			focusServerState(focus);
 			break;
 		default:
 			break;
@@ -158,6 +197,7 @@ public class MainActivity extends BaseActivity implements
 	@SuppressLint("NewApi")
 	private void focus(TextView txt, boolean focus) {
 		if (focus) {
+
 			Drawable drawableLeft = getResources().getDrawable(
 					R.drawable.arrow_left_select);
 			Drawable drawableRight = getResources().getDrawable(
@@ -204,4 +244,56 @@ public class MainActivity extends BaseActivity implements
 				| Intent.FLAG_ACTIVITY_SINGLE_TOP);
 		startActivity(intent);
 	}
+
+	/**
+	 * 注册该广播
+	 */
+	public void registerBoradcastReceiver() {
+		IntentFilter myIntentFilter = new IntentFilter();
+		myIntentFilter.addAction(Constants.OPEN_CLOSE_STATE);
+		// 注册广播
+		registerReceiver(mBroadcastReceiver, myIntentFilter);
+	}
+
+	/**
+	 * 定义广播
+	 */
+	private BroadcastReceiver mBroadcastReceiver = new BroadcastReceiver() {
+		@Override
+		public void onReceive(Context context, Intent intent) {
+			String action = intent.getAction();
+			if (action.equals(Constants.OPEN_CLOSE_STATE)) {
+				int server_state = intent.getIntExtra("state",
+						Constants.STATE_NONE);
+				state = server_state;
+				switch (state) {
+				case Constants.STATE_NONE:
+
+					break;
+				case Constants.STATE_OPENED:
+					txt_server_state.setText("已开启");
+
+					break;
+				case Constants.STATE_OPENING:
+					txt_server_state.setText("开启中...");
+
+					break;
+				case Constants.STATE_CLOSEED:
+					txt_server_state.setText("已关闭");
+					break;
+				case Constants.STATE_CLOSEING:
+					txt_server_state.setText("关闭中...");
+
+					break;
+				default:
+					break;
+				}
+			}
+		}
+	};
+
+	protected void onDestroy() {
+		super.onDestroy();
+		unregisterReceiver(mBroadcastReceiver);
+	};
 }

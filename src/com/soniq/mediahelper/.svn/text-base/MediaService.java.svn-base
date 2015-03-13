@@ -82,12 +82,16 @@ public class MediaService extends Service {
 			return;
 		}
 		sendMessage("同屏助手服务正在开启,请稍候...");
+		sendBroadcast(new Intent(Constants.OPEN_CLOSE_STATE).putExtra("state",
+				Constants.STATE_OPENING));
 		mRenderProxy.startEngine();
 		airServer.startService(
 				MediaService.this,
 				DlnaUtils.getDevName(MediaService.this) + "@"
 						+ DlnaUtils.getIpLastNum(ip));
 		sendMessage("同屏助手服务已开启");
+		sendBroadcast(new Intent(Constants.OPEN_CLOSE_STATE).putExtra("state",
+				Constants.STATE_OPENED));
 		isStartServer = true;
 	}
 
@@ -101,9 +105,13 @@ public class MediaService extends Service {
 			return;
 		}
 		sendMessage("同屏助手服务正在关闭,请稍候...");
+		sendBroadcast(new Intent(Constants.OPEN_CLOSE_STATE).putExtra("state",
+				Constants.STATE_CLOSEING));
 		mRenderProxy.stopEngine();
 		airServer.stopService();
 		sendMessage("同屏助手服务已关闭");
+		sendBroadcast(new Intent(Constants.OPEN_CLOSE_STATE).putExtra("state",
+				Constants.STATE_CLOSEED));
 		isStartServer = false;
 
 	}
@@ -125,7 +133,9 @@ public class MediaService extends Service {
 
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
-		isShowToast = intent.getBooleanExtra("isShowToast", true);
+		if (intent != null) {
+			isShowToast = intent.getBooleanExtra("isShowToast", true);
+		}
 		return super.onStartCommand(intent, flags, startId);
 	}
 

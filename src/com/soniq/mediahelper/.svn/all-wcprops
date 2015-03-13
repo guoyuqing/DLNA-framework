@@ -19,7 +19,7 @@ Constants.java
 K 25
 svn:wc:ra_dav:version-url
 V 84
-/svn/soniq/!svn/ver/457/android/MediaHelper/src/com/soniq/mediahelper/Constants.java
+/svn/soniq/!svn/ver/503/android/MediaHelper/src/com/soniq/mediahelper/Constants.java
 END
 UniversalImageLoadTool.java
 K 25
@@ -37,7 +37,7 @@ MainActivity.java
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/svn/soniq/!svn/ver/455/android/MediaHelper/src/com/soniq/mediahelper/MainActivity.java
+/svn/soniq/!svn/ver/503/android/MediaHelper/src/com/soniq/mediahelper/MainActivity.java
 END
 HttpHelper.java
 K 25
@@ -49,35 +49,35 @@ NetworkUtils.java
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/svn/soniq/!svn/ver/455/android/MediaHelper/src/com/soniq/mediahelper/NetworkUtils.java
+/svn/soniq/!svn/ver/503/android/MediaHelper/src/com/soniq/mediahelper/NetworkUtils.java
 END
 CrashHandler.java
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/svn/soniq/!svn/ver/448/android/MediaHelper/src/com/soniq/mediahelper/CrashHandler.java
+/svn/soniq/!svn/ver/503/android/MediaHelper/src/com/soniq/mediahelper/CrashHandler.java
 END
 WAPI.java
 K 25
 svn:wc:ra_dav:version-url
 V 79
-/svn/soniq/!svn/ver/455/android/MediaHelper/src/com/soniq/mediahelper/WAPI.java
+/svn/soniq/!svn/ver/503/android/MediaHelper/src/com/soniq/mediahelper/WAPI.java
 END
 AirplayServer.java
 K 25
 svn:wc:ra_dav:version-url
 V 88
-/svn/soniq/!svn/ver/455/android/MediaHelper/src/com/soniq/mediahelper/AirplayServer.java
+/svn/soniq/!svn/ver/503/android/MediaHelper/src/com/soniq/mediahelper/AirplayServer.java
 END
 MediaService.java
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/svn/soniq/!svn/ver/455/android/MediaHelper/src/com/soniq/mediahelper/MediaService.java
+/svn/soniq/!svn/ver/503/android/MediaHelper/src/com/soniq/mediahelper/MediaService.java
 END
 ClientUpgrade.java
 K 25
 svn:wc:ra_dav:version-url
 V 88
-/svn/soniq/!svn/ver/455/android/MediaHelper/src/com/soniq/mediahelper/ClientUpgrade.java
+/svn/soniq/!svn/ver/503/android/MediaHelper/src/com/soniq/mediahelper/ClientUpgrade.java
 END

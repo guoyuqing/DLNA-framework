@@ -50,7 +50,7 @@ public class DMRCenter implements ActionReflectionListener, IDMRAction {
 			onRenderPause(value, data);
 			break;
 		case PlatinumReflection.MEDIA_RENDER_CTL_MSG_STOP:
-			onRenderStop(value, data);
+			// onRenderStop(value, data);
 			break;
 		case PlatinumReflection.MEDIA_RENDER_CTL_MSG_SEEK:
 			onRenderSeek(value, data);

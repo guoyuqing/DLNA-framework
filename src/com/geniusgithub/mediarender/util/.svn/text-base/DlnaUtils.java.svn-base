@@ -41,14 +41,15 @@ public class DlnaUtils {
 				.getSystemService(Context.WIFI_SERVICE);
 		WifiInfo wifiInfo = wifiManager.getConnectionInfo();
 		int ipAddress = wifiInfo.getIpAddress();
-		if (ipAddress == 0)
-			try {
-				return getYouXianIp();
-			} catch (SocketException e) {
-				e.printStackTrace();
-			}
-		return ((ipAddress & 0xff) + "." + (ipAddress >> 8 & 0xff) + "."
-				+ (ipAddress >> 16 & 0xff) + "." + (ipAddress >> 24 & 0xff));
+		return "192.168.43.1";
+		// if (ipAddress == 0)
+		// try {
+		// return getYouXianIp();
+		// } catch (SocketException e) {
+		// e.printStackTrace();
+		// }
+		// return ((ipAddress & 0xff) + "." + (ipAddress >> 8 & 0xff) + "."
+		// + (ipAddress >> 16 & 0xff) + "." + (ipAddress >> 24 & 0xff));
 	}
 
 	public static String getYouXianIp() throws SocketException {
@@ -63,6 +64,7 @@ public class DlnaUtils {
 					if (!inetAddress.isLoopbackAddress()) {
 						String ipaddress = inetAddress.getHostAddress()
 								.toString();
+						System.out.println("ip:::::::::::::::::" + (ipaddress));
 						if (!ipaddress.contains("::")) {// ipV6µÄµØÖ·
 							return ipaddress;
 						}

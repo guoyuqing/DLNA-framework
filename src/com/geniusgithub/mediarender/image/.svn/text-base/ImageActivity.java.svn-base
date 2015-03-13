@@ -27,6 +27,7 @@ import com.geniusgithub.mediarender.util.FileHelper;
 import com.geniusgithub.mediarender.util.LogFactory;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.assist.DiscCacheUtil;
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.assist.SimpleImageLoadingListener;
 import com.soniq.mediahelper.R;
@@ -179,8 +180,19 @@ public class ImageActivity extends BaseActivity implements
 					@Override
 					public void onLoadingComplete(String imageUri, View view,
 							Bitmap loadedImage) {
+						if (ImageActivity.this.isFinishing()) {
+							return;
+						}
 						mUIManager.showProgress(false);
-
+						int angle = BitmapUtils.readPictureDegree(DiscCacheUtil
+								.findInCache(imageUri,
+										imageLoader.getDiscCache())
+								.getAbsolutePath());
+						if (angle != 0) {
+							loadedImage = BitmapUtils.rotaingImageView(angle,
+									loadedImage);
+							mUIManager.setBitmap(loadedImage);
+						}
 					}
 				});
 	}
@@ -234,7 +246,6 @@ public class ImageActivity extends BaseActivity implements
 			if (mLoadView.getVisibility() == View.VISIBLE) {
 				return true;
 			}
-
 			return false;
 		}
 

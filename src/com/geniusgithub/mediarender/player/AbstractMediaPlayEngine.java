@@ -1,6 +1,5 @@
 package com.geniusgithub.mediarender.player;
 
-
 import android.content.Context;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
@@ -11,45 +10,41 @@ import com.geniusgithub.mediarender.center.DlnaMediaModel;
 import com.geniusgithub.mediarender.util.CommonLog;
 import com.geniusgithub.mediarender.util.LogFactory;
 
+public abstract class AbstractMediaPlayEngine implements IBasePlayEngine,
+		OnCompletionListener, OnPreparedListener, OnErrorListener {
 
-
-public abstract class AbstractMediaPlayEngine implements IBasePlayEngine, OnCompletionListener, 
-												OnPreparedListener, OnErrorListener{
-	
 	private static final CommonLog log = LogFactory.createLog();
-	
-	protected MediaPlayer   mMediaPlayer;					
-	protected DlnaMediaModel mMediaInfo;							   								
-	protected Context 		mContext;
-	protected int 			mPlayState;   
-	
+
+	protected MediaPlayer mMediaPlayer;
+	protected DlnaMediaModel mMediaInfo;
+	protected Context mContext;
+	protected int mPlayState;
+
 	protected PlayerEngineListener mPlayerEngineListener;
-	
+
 	protected abstract boolean prepareSelf();
+
 	protected abstract boolean prepareComplete(MediaPlayer mp);
-	
-	
-	protected  void defaultParam()
-	{
-		mMediaPlayer = new MediaPlayer();		
-		mMediaPlayer.setOnCompletionListener(this);	
+
+	protected void defaultParam() {
+		mMediaPlayer = new MediaPlayer();
+		mMediaPlayer.setOnCompletionListener(this);
 		mMediaPlayer.setOnPreparedListener(this);
 		mMediaInfo = null;
 		mPlayState = PlayState.MPS_NOFILE;
 
-		
 	}
-	
-	public AbstractMediaPlayEngine(Context context){
-	
+
+	public AbstractMediaPlayEngine(Context context) {
+
 		mContext = context;
-		defaultParam();	
+		defaultParam();
 	}
-	
-	public void setPlayerListener(PlayerEngineListener listener){
+
+	public void setPlayerListener(PlayerEngineListener listener) {
 		mPlayerEngineListener = listener;
 	}
-		
+
 	@Override
 	public void play() {
 
@@ -65,14 +60,14 @@ public abstract class AbstractMediaPlayEngine implements IBasePlayEngine, OnComp
 		default:
 			break;
 		}
-		
+
 	}
 
 	@Override
 	public void pause() {
-		
+
 		switch (mPlayState) {
-		case PlayState.MPS_PLAYING:			
+		case PlayState.MPS_PLAYING:
 			mMediaPlayer.pause();
 			mPlayState = PlayState.MPS_PAUSE;
 			performPlayListener(mPlayState);
@@ -80,36 +75,36 @@ public abstract class AbstractMediaPlayEngine implements IBasePlayEngine, OnComp
 		default:
 			break;
 		}
-	
+
 	}
 
 	@Override
 	public void stop() {
-		if (mPlayState != PlayState.MPS_NOFILE){
+		if (mPlayState != PlayState.MPS_NOFILE) {
 			mMediaPlayer.reset();
 			mPlayState = PlayState.MPS_STOP;
 			performPlayListener(mPlayState);
+
 		}
 	}
-	
-	
+
 	@Override
 	public void skipTo(int time) {
-		
+
 		switch (mPlayState) {
-			case PlayState.MPS_PLAYING:
-			case PlayState.MPS_PAUSE:				
-				int time2 = reviceSeekValue(time);
-				mMediaPlayer.seekTo(time2);
-				break;
-			default:
-				break;
+		case PlayState.MPS_PLAYING:
+		case PlayState.MPS_PAUSE:
+			int time2 = reviceSeekValue(time);
+			mMediaPlayer.seekTo(time2);
+			break;
+		default:
+			break;
 		}
-	
+
 	}
-	
-	
-	public void exit(){
+
+	public void exit() {
+		System.out.println("cmd::::::::::::::::finish::::::::::::exit");
 		stop();
 		mMediaPlayer.release();
 		mMediaInfo = null;
@@ -118,110 +113,100 @@ public abstract class AbstractMediaPlayEngine implements IBasePlayEngine, OnComp
 
 	@Override
 	public void onPrepared(MediaPlayer mp) {
-	
+
 		prepareComplete(mp);
 	}
-	
-	
 
 	@Override
 	public void onCompletion(MediaPlayer mp) {
 		log.e("onCompletion...");
-		if (mPlayerEngineListener != null){
+		if (mPlayerEngineListener != null) {
 			mPlayerEngineListener.onTrackPlayComplete(mMediaInfo);
 		}
-		
+
 	}
 
 	public boolean isPlaying() {
 		return mPlayState == PlayState.MPS_PLAYING;
 	}
 
-	public boolean isPause(){
+	public boolean isPause() {
 		return mPlayState == PlayState.MPS_PAUSE;
 	}
-	
-	public void playMedia(DlnaMediaModel mediaInfo){
-		
-		if (mediaInfo != null){
+
+	public void playMedia(DlnaMediaModel mediaInfo) {
+
+		if (mediaInfo != null) {
 			mMediaInfo = mediaInfo;
 			prepareSelf();
 		}
 	}
-		
-	public int getCurPosition()
-	{
-		if (mPlayState == PlayState.MPS_PLAYING || mPlayState == PlayState.MPS_PAUSE)
-		{
+
+	public int getCurPosition() {
+		if (mPlayState == PlayState.MPS_PLAYING
+				|| mPlayState == PlayState.MPS_PAUSE) {
 			return mMediaPlayer.getCurrentPosition();
 		}
-			
+
 		return 0;
 	}
-	
-	public int getDuration(){
-		
-		switch(mPlayState){
-			case PlayState.MPS_PLAYING:
-			case PlayState.MPS_PAUSE:
-			case PlayState.MPS_PARECOMPLETE:
-				return mMediaPlayer.getDuration();
+
+	public int getDuration() {
+
+		switch (mPlayState) {
+		case PlayState.MPS_PLAYING:
+		case PlayState.MPS_PAUSE:
+		case PlayState.MPS_PARECOMPLETE:
+			return mMediaPlayer.getDuration();
 		}
-	
+
 		return 0;
 	}
-	
-	public int getPlayState()
-	{
+
+	public int getPlayState() {
 		return mPlayState;
 	}
 
-	protected void performPlayListener(int playState)
-	{
-		if (mPlayerEngineListener != null){
-			switch(playState){
-				case PlayState.MPS_INVALID:
-					mPlayerEngineListener.onTrackStreamError(mMediaInfo);
-					break;
-				case PlayState.MPS_STOP:
-					mPlayerEngineListener.onTrackStop(mMediaInfo);
-					break;
-				case PlayState.MPS_PLAYING:
-					mPlayerEngineListener.onTrackPlay(mMediaInfo);
-					break;
-				case PlayState.MPS_PAUSE:
-					mPlayerEngineListener.onTrackPause(mMediaInfo);
-					break;
-				case PlayState.MPS_PARESYNC:
-					mPlayerEngineListener.onTrackPrepareSync(mMediaInfo);
-					break;
+	protected void performPlayListener(int playState) {
+		if (mPlayerEngineListener != null) {
+			switch (playState) {
+			case PlayState.MPS_INVALID:
+				mPlayerEngineListener.onTrackStreamError(mMediaInfo);
+				break;
+			case PlayState.MPS_STOP:
+				mPlayerEngineListener.onTrackStop(mMediaInfo);
+				break;
+			case PlayState.MPS_PLAYING:
+				mPlayerEngineListener.onTrackPlay(mMediaInfo);
+				break;
+			case PlayState.MPS_PAUSE:
+				mPlayerEngineListener.onTrackPause(mMediaInfo);
+				break;
+			case PlayState.MPS_PARESYNC:
+				mPlayerEngineListener.onTrackPrepareSync(mMediaInfo);
+				break;
 			}
 		}
-	}	
-	
-	private int reviceSeekValue(int value)
-	{
-		if (value < 0)
-		{
+	}
+
+	private int reviceSeekValue(int value) {
+		if (value < 0) {
 			value = 0;
 		}
-		
-		if (value > mMediaPlayer.getDuration())
-		{
+
+		if (value > mMediaPlayer.getDuration()) {
 			value = mMediaPlayer.getDuration();
 		}
-		
+
 		return value;
 	}
+
 	@Override
 	public boolean onError(MediaPlayer mp, int what, int extra) {
 
-
 		log.e("onError --> what = " + what);
-		
+
 		return false;
 	}
-
-	
 
 }

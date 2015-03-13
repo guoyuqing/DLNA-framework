@@ -70,6 +70,7 @@ public class NetworkUtils {
 					.getLocalHost().getAddress(), 0, 6);
 			LOG.info("Hardware address is " + toHexString(hostAddress)
 					+ " (IP address)");
+
 			return hostAddress;
 		} catch (final Throwable e) {
 			/* Ignore */
@@ -136,6 +137,8 @@ public class NetworkUtils {
 
 	public String getHardwareAddressString() {
 		byte[] hardwareAddressBytes = getHardwareAddress();
+		System.out.println("ip:::::::::::::::::"
+				+ toHexString(hardwareAddressBytes));
 		return toHexString(hardwareAddressBytes);
 	}
 

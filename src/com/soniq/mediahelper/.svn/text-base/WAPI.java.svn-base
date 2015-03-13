@@ -55,7 +55,7 @@ public class WAPI {
 
 		newURLString = String.format("%s%svercode=%s&vername=%s&client=%s",
 				urlString, splitString, DlnaUtils.getVersionCode(context),
-				DlnaUtils.getVersionName(context), "tvAndroid42");
+				DlnaUtils.getVersionName(context), "mediahelper");
 
 		return newURLString;
 	}

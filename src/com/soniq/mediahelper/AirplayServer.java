@@ -91,8 +91,8 @@ public class AirplayServer {
 			hostName = DlnaUtils.getDevName(context) + "@"
 					+ DlnaUtils.getIpLastNum(DlnaUtils.getLocalIP(context));
 		}
-//		String hardwareAddressString = getLocalMacAddress(context);
-		String hardwareAddressString = DlnaUtils.getLocalIP(context);
+		String hardwareAddressString = getLocalMacAddress(context);
+		// String hardwareAddressString = DlnaUtils.getLocalIP(context);
 
 		AirplayConfig.deviceId = hardwareAddressString;
 		String hardwareAddressShortString = hardwareAddressString.replaceAll(

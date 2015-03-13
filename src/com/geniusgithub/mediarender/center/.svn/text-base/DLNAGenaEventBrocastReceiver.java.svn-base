@@ -60,10 +60,10 @@ public class DLNAGenaEventBrocastReceiver extends BroadcastReceiver {
 
 			if (playingstate
 					.equalsIgnoreCase(PlatinumReflection.MEDIA_PLAYINGSTATE_STOP)) {
-				PlatinumJniProxy
-						.responseGenaEvent(
-								PlatinumReflection.MEDIA_RENDER_TOCONTRPOINT_SET_MEDIA_POSITION,
-								"00:00:00", null);
+				// PlatinumJniProxy
+				// .responseGenaEvent(
+				// PlatinumReflection.MEDIA_RENDER_TOCONTRPOINT_SET_MEDIA_POSITION,
+				// "00:00:00", null);
 			}
 			break;
 		}

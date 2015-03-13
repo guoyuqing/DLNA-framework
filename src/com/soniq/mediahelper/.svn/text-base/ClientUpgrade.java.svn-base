@@ -79,6 +79,7 @@ public class ClientUpgrade {
 
 		@Override
 		protected void onPostExecute(String result) {
+			System.out.println("result::::::::::::" + result);
 			int state = doParseResult(result);
 			doCallback(state);
 		}

@@ -8,6 +8,7 @@ import android.content.Context;
 
 import com.geniusgithub.mediarender.util.CommonLog;
 import com.geniusgithub.mediarender.util.LogFactory;
+import com.soniq.mediahelper.CrashHandler;
 import com.tendcloud.tenddata.TCAgent;
 
 public class RenderApplication extends Application implements ItatisticsEvent {
@@ -65,6 +66,8 @@ public class RenderApplication extends Application implements ItatisticsEvent {
 		mDeviceInfo = new DeviceInfo();
 
 		TCAgent.init(this);
+		CrashHandler catchHandler = CrashHandler.getInstance();
+		catchHandler.init(this);
 	}
 
 	public void updateDevInfo(String name, String uuid) {

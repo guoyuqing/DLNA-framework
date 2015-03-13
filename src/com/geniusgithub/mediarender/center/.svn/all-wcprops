@@ -13,13 +13,13 @@ DLNAGenaEventBrocastReceiver.java
 K 25
 svn:wc:ra_dav:version-url
 V 117
-/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/center/DLNAGenaEventBrocastReceiver.java
+/svn/soniq/!svn/ver/503/android/MediaHelper/src/com/geniusgithub/mediarender/center/DLNAGenaEventBrocastReceiver.java
 END
 DMRCenter.java
 K 25
 svn:wc:ra_dav:version-url
 V 98
-/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/center/DMRCenter.java
+/svn/soniq/!svn/ver/503/android/MediaHelper/src/com/geniusgithub/mediarender/center/DMRCenter.java
 END
 IBaseEngine.java
 K 25
@@ -31,7 +31,7 @@ DLNAGenaEventBrocastFactory.java
 K 25
 svn:wc:ra_dav:version-url
 V 116
-/svn/soniq/!svn/ver/446/android/MediaHelper/src/com/geniusgithub/mediarender/center/DLNAGenaEventBrocastFactory.java
+/svn/soniq/!svn/ver/503/android/MediaHelper/src/com/geniusgithub/mediarender/center/DLNAGenaEventBrocastFactory.java
 END
 DlnaMediaModelFactory.java
 K 25
